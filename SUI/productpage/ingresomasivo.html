@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SUI</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="comosevenoma.css">
+</head>
+<body style="margin: 0px">
+  <div class="header" style="width: 100vw; text-align: center; background-color: #369443">
+    <h1 style="font-size:10vh; margin-top: 0px; color: rgb(255, 255, 255)" onclick="location.href='../index.html'">SUI</h1>
+  </div>
+  <form action="peticiones.php" method="post">
+      <table class="CenterTable" style="background-color: #369443; color: #ffffff;">
+          <tr>
+              <th style="width: 50%">
+                  Ubicación a ingresar
+              </th>
+              <td style="width: 50%">
+                  <input type="text" id="Ubicacion" name="Ubicacion" style="width: 90%">
+              </td>
+          </tr>
+      </table>
+      <table class="CenterTable" style="background-color: #369443; color: #ffffff;">
+        <tr>
+            <th style="width: 50%">
+                Codigos de barra a ingresar
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <textarea name="Ingreso" id="Ingreso" style="width: 85vw; height: 50vh; display: block; margin-left: auto; margin-right: auto;"></textarea>>
+            </td>
+        </tr>
+    </table>
+    <table class="CenterTable" style="background-color: #369443; color: #ffffff;">
+        <tr>
+            <th style="width: 50%">
+                <input type="submit" id="submit" value="Añadir ubicacion a productos escritos" >
+            </th>
+        </tr>
+    </table>
+  </form>
+</body>
+</html> 

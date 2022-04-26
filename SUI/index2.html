@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>SUI</title>
+  <link rel="stylesheet" type="text/css" href="comosevenoma.css">
+</head>
+<body style="margin: 0px">
+  <div class="header" style="text-align: center; background-color: #369443">
+    <h1 style="font-size:10vh; margin-top: 0px; color: rgb(255, 255, 255)">SUI</h1>
+  </div>
+  <div style="text-align: center">
+    <h2 style="display: inline">Ingrese código de producto:</h2>
+    <input id="CriterioBusqueda" type="number" style="display: inline">
+    <button id="boton_buscar"  style="display: inline">Buscar</button> 
+    <script type="text/javascript">
+    document.getElementById("boton_buscar").onclick = function(){
+      var criterio = document.getElementById("CriterioBusqueda").value
+      if (criterio == ""){
+        window.alert("Ingresa un criterio de busqueda!")
+      } else{
+      if (criterio.length>6){
+        var url = "/SUI/productpage/product_page.php?barr=" + criterio
+        window.location = url
+      } else {
+        var url = "/SUI/productpage/product_page.php?int=" + criterio
+        window.location = url
+      }}}
+      document.getElementById("CriterioBusqueda")
+      .addEventListener("keyup", function(event) {
+      event.preventDefault();
+      if (event.keyCode === 13) {
+          document.getElementById("boton_buscar").click();
+      }
+  });
+    </script>
+  </div>
+  <div style="text-align: center; margin-top: 5vh">
+    <table id='tablamasivo' class="CenterTable" style="background-color: #369443; color: #ffffff;">
+      <tr>
+        <th class="Column">
+          <button id="Masivo" style="border: none; padding: 0; background: none; color: #ffffff; height: 7vh">Insertar Ubicación para varios productos</button>
+          <script>
+            document.getElementById('Masivo').onclick = function(){
+              document.getElementById('tablamasivo').style.backgroundColor = '#2e5f34'
+              window.location = '/SUI/productpage/ingresomasivo.html'
+            }
+          </script>
+        </th>
+      </tr>
+    </table>
+  </div>
+  <div>
+    <iframe src="https://drive.google.com/embeddedfolderview?id=1dKWkR4LgSWOBWlL8RczyhrkkF5491BYi#grid" style="width:100%; height:600px; border:0;"></iframe>
+
+  </div>
+</body>
+</html> 
